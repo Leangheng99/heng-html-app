@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>បញ្ជីមន្ត្រីរាជការ</title>
+    <link rel="stylesheet" href="Untitled-1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>បញ្ជីមន្ត្រីរាជការ</h1>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <input type="text" id="officialID" placeholder="បញ្ចូលអត្តលេខមន្ត្រីរាជការ...">
+            <input type="text" id="fullName" placeholder="បញ្ចូលគោត្តនាម និងនាម...">
+            <select id="gender">
+                <option value="ប្រុស">ប្រុស</option>
+                <option value="ស្រី">ស្រី</option>
+            </select>
+            <input type="date" id="dob" placeholder="ថ្ងៃខែឆ្នាំកំណើត...">
+            <input type="text" id="department" placeholder="បញ្ចូលក្របខណ្ឌ...">
+            <input type="text" id="profession" placeholder="បញ្ចូលមុខវិជ្ជាជីវៈ...">
+            <input type="text" id="position" placeholder="បញ្ចូលតួនាទី...">
+            <input type="text" id="expertiseOffice" placeholder="បញ្ចូលការិយាល័យជំនាញ...">
+            <input type="text" id="officeUnit" placeholder="បញ្ចូលមន្ទីរ-អង្គភាព...">
+            <input type="text" id="educationLevel" placeholder="បញ្ចូលកម្រិតវប្បធម៌...">
+            <input type="number" id="baseSalary" placeholder="បញ្ចូលប្រាក់មូលដ្ឋាន...">
+            <input type="number" id="roleSalary" placeholder="បញ្ចូលប្រាក់មុខងារ...">
+            <input type="number" id="spouseCount" placeholder="ចំនួនប្រពន្ធ...">
+            <input type="number" id="childrenCount" placeholder="ចំនួនកូន...">
+            <button onclick="addOfficial()">បន្ថែមមន្ត្រីរាជការ</button>
+        </div>
+
+        <!-- Official List -->
+        <ul id="officialList"></ul>
+
+        <!-- Export/Import Buttons -->
+        <div class="export-import">
+            <button onclick="exportToExcel()">Export to Excel</button>
+            <label for="fileInput" class="import-label">Export from Excel</label>
+            <input type="file" id="fileInput" style="display: none;" onchange="importFromExcel(event)">
+        </div>
+    </div>
+
+    <!-- Include SheetJS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="Untitled-1.js"></script>
+</body>
+</html>
